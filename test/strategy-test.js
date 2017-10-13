@@ -59,7 +59,8 @@ vows.describe('ClientJWTBearerStrategy').addBatch({
         };
 
         req.body = {};
-        req.body['assertion'] = contents.join('.');
+        req.body['client_assertion_type'] = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer';
+        req.body['client_assertion'] = contents.join('.');
         process.nextTick(function () {
           strategy.authenticate(req);
         });
@@ -110,7 +111,8 @@ vows.describe('ClientJWTBearerStrategy').addBatch({
         };
 
         req.body = {};
-        req.body['assertion'] = contents.join('.');
+        req.body['client_assertion_type'] = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer';
+        req.body['client_assertion'] = contents.join('.');
         process.nextTick(function () {
           strategy.authenticate(req);
         });
@@ -160,7 +162,8 @@ vows.describe('ClientJWTBearerStrategy').addBatch({
         };
 
         req.body = {};
-        req.body['assertion'] = contents.join('.');
+        req.body['client_assertion_type'] = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer';
+        req.body['client_assertion'] = contents.join('.');
         process.nextTick(function () {
           strategy.authenticate(req);
         });
@@ -205,7 +208,8 @@ vows.describe('ClientJWTBearerStrategy').addBatch({
         };
 
         req.body = {};
-        req.body['assertion'] = contents.join('.');
+        req.body['client_assertion_type'] = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer';
+        req.body['client_assertion'] = contents.join('.');
         process.nextTick(function () {
           strategy.authenticate(req);
         });
@@ -253,7 +257,8 @@ vows.describe('ClientJWTBearerStrategy').addBatch({
         };
 
         //req.body = {};
-        //req.body['assertion'] = contents.join('.');
+        //req.body['client_assertion_type'] = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer';
+        //req.body['client_assertion'] = contents.join('.');
         process.nextTick(function () {
           strategy.authenticate(req);
         });
@@ -300,7 +305,8 @@ vows.describe('ClientJWTBearerStrategy').addBatch({
         };
 
         req.body = {};
-        req.body['assertion'] = contents.join('.');
+        req.body['client_assertion_type'] = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer';
+        req.body['client_assertion'] = contents.join('.');
         process.nextTick(function () {
           strategy.authenticate(req);
         });
@@ -347,7 +353,8 @@ vows.describe('ClientJWTBearerStrategy').addBatch({
         };
 
         req.body = {};
-        req.body['assertion'] = contents.join('.');
+        req.body['client_assertion_type'] = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer';
+        req.body['client_assertion'] = contents.join('.');
         process.nextTick(function () {
           strategy.authenticate(req);
         });
@@ -394,7 +401,8 @@ vows.describe('ClientJWTBearerStrategy').addBatch({
         };
 
         req.body = {};
-        req.body['assertion'] = contents.join('.');
+        req.body['client_assertion_type'] = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer';
+        req.body['client_assertion'] = contents.join('.');
         process.nextTick(function () {
           strategy.authenticate(req);
         });
@@ -441,7 +449,8 @@ vows.describe('ClientJWTBearerStrategy').addBatch({
         };
 
         req.body = {};
-        req.body['assertion'] = contents.join('.');
+        req.body['client_assertion_type'] = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer';
+        req.body['client_assertion'] = contents.join('.');
         process.nextTick(function () {
           strategy.authenticate(req);
         });
@@ -499,7 +508,8 @@ vows.describe('ClientJWTBearerStrategy').addBatch({
         };
 
         req.body = {};
-        req.body['assertion'] = contents.join('.');
+        req.body['client_assertion_type'] = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer';
+        req.body['client_assertion'] = contents.join('.');
         process.nextTick(function () {
           strategy.authenticate(req);
         });
