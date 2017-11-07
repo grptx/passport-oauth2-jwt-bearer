@@ -9,9 +9,9 @@ by the JSON Web Token (JWT) Bearer Token Profiles for OAuth 2.0 draft.  These cr
 the token endpoint and used as an alternative to HTTP Basic authentication.  This module is modeled off of Google's OAuth 2.0 [Server to Server Applications](https://developers.google.com/accounts/docs/OAuth2ServiceAccount).  This module can be used with the [oauth2orize-jwt-bearer](https://github.com/xtuple/oauth2orize-jwt-bearer) module to create a JWT OAuth 2.0 exchange scenario server.
 
 ## Install
-
-    $ npm install passport-oauth2-jwt-bearer
-
+```bash
+$ npm install passport-oauth2-jwt-bearer
+```
 ## Usage
 
 #### Configure Strategy
@@ -19,19 +19,19 @@ the token endpoint and used as an alternative to HTTP Basic authentication.  Thi
 The JSON Web Token (JWT) Bearer Token Profiles for OAuth 2.0 client authentication strategy authenticates clients
 using a JWT.  The strategy requires a `verify` callback,
 which accepts those credentials and calls `done` providing a client.
+```javascript
+var ClientJWTBearerStrategy = require('passport-oauth2-jwt-bearer').Strategy;
 
-    var ClientJWTBearerStrategy = require('passport-oauth2-jwt-bearer').Strategy;
-
-    passport.use(new ClientJWTBearerStrategy(
-      function(claimSetIss, done) {
+passport.use(new ClientJWTBearerStrategy(
+    function(claimSetIss, done) {
         Clients.findOne({ clientId: claimSetIss }, function (err, client) {
-          if (err) { return done(err); }
-          if (!client) { return done(null, false); }
-          return done(null, client);
+            if (err) { return done(err); }
+            if (!client) { return done(null, false); }
+            return done(null, client);
         });
-      }
-    ));
-
+    }
+));
+```
 #### Authenticate Requests
 
 Use `passport.authenticate()`, specifying the `'oauth2-jwt-bearer'`
@@ -40,16 +40,16 @@ strategy, to authenticate requests.
 For example, as route middleware in an [Express](http://expressjs.com/)
 application, using [OAuth2orize](https://github.com/jaredhanson/oauth2orize)
 middleware to implement the token endpoint:
-
-    app.get('/profile',
-      passport.authenticate(['oauth2-jwt-bearer'], { session: false }),
-      oauth2orize.token());
-
+```javascript
+app.get('/profile',
+    passport.authenticate(['oauth2-jwt-bearer'], { session: false }),
+    oauth2orize.token());
+```
 ## Tests
-
-    $ npm install --dev
-    $ make test
-
+```bash
+$ npm install --dev
+$ make test
+```
 ## Credits
 
   - [bendiy](http://github.com/bendiy)
