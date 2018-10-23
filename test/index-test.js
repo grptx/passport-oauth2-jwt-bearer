@@ -3,7 +3,6 @@ var assert = require('assert');
 var util = require('util');
 var clientJWTBearer = require('passport-oauth2-jwt-bearer');
 
-
 vows.describe('passport-oauth2-jwt-bearer').addBatch({
 
   'module': {
@@ -13,7 +12,7 @@ vows.describe('passport-oauth2-jwt-bearer').addBatch({
 
     'should export Strategy': function (x) {
       assert.isFunction(clientJWTBearer.Strategy);
-    },
-  },
+    }
+  }
 
 }).export(module);
