@@ -1,8 +1,21 @@
 {
   "name": "passport-oauth2-jwt-bearer",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "JSON Web Token (JWT) Bearer Token Profiles for OAuth 2.0 client authentication strategy for Passport.",
-  "keywords": ["passport", "oauth", "oauth2", "authn", "authentication", "authz", "authorization", "api", "jwt", "json", "token", "bearer"],
+  "keywords": [
+    "passport",
+    "oauth",
+    "oauth2",
+    "authn",
+    "authentication",
+    "authz",
+    "authorization",
+    "api",
+    "jwt",
+    "json",
+    "token",
+    "bearer"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/xtuple/passport-oauth2-jwt-bearer.git"
@@ -15,21 +28,25 @@
     "email": "ben@xtuple.com",
     "url": "http://www.xtuple.com/"
   },
-  "licenses": [ {
-    "type": "MIT",
-    "url": "http://www.opensource.org/licenses/MIT"
-  } ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
   "main": "./lib/passport-oauth2-jwt-bearer",
   "dependencies": {
-    "pkginfo": "0.2.x",
-    "passport": "~0.1.1",
-    "jws": "0.2.x"
+    "jws": "^3.1.5",
+    "passport": "^0.4.0",
+    "pkginfo": "^0.4.1"
   },
   "devDependencies": {
-    "vows": "0.6.x"
+    "vows": "^0.8.2"
   },
   "scripts": {
     "test": "NODE_PATH=lib node_modules/.bin/vows test/*-test.js"
   },
-  "engines": { "node": ">= 0.4.0" }
+  "engines": {
+    "node": ">= 8.11.0"
+  }
 }
